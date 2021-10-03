@@ -1,0 +1,49 @@
+<h3 style="text-align: center;" >Eligibility Form</h3>
+<hr>
+<form [formGroup]="eligibilityForm" (ngSubmit)="onSubmit()" class="form">
+    <h4>Vehicle Details</h4><br>
+    <label>Car Make </label>
+    <input id="Car Make" type="text" formControlName="carMake"><br><br>
+    
+    <label>Car Model</label>
+    <input id="Car_Model" type="text" formControlName="carModel"><br><br>
+
+    <label>Ex Show Room Price</label>
+    <input id="Ex Show Room Price" type="text" formControlName="exShowRoomPrice"><br><br>
+
+    <label>On Road Price</label>
+    <input id="On Road Price" type="text" formControlName="onRoadPrice"><br><br>
+    
+<div formGroupName="applicantDetails">
+    <h4>Applicant Details</h4><br>
+    <label>Name</label>
+    <input id="Name" type="text" formControlName="name"><br><br>
+
+    <label>Age</label>
+    <input id="Age" type="text" formControlName="age"><br><br>
+
+    <label>Gender</label>
+    <input id="Gender" type="text" formControlName="gender"><br><br>
+
+    <label>Type Of Employement</label>
+    <input id="Type Of Employement" type="text" formControlName="typeOfEmployement"><br><br>
+
+    <label>Yearly Salary</label>
+    <input id="Yearly Salary" type="text" formControlName="yearlySalary"><br><br>
+    
+    <label>Existing Emi</label>
+    <input id="Existing Emi" type="text" formControlName="existingEmi"><br><br>
+    <div formGroupName="contactDetails">
+    <h4>Contact Details</h4><br>
+    
+    <label>Mobile No</label>
+    <input id="Mobile No" type="text" formControlName="mobileNo"><br><br>
+
+    <label>Email Id</label>
+    <input id="Email Id" type="text" formControlName="emailId"><br>
+    </div>
+    <p>Complete to submit</p>
+    <button type="submit"[disabled]="!eligibilityForm.valid">Check Eligibility</button>
+</div>
+</form>
+ 

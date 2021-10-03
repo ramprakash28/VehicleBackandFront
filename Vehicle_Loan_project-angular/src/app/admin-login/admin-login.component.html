@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h2 >Admin Login</h2>
+<form #adminLoginForm="ngForm" (ngSubmit)="loginAdmin(adminLoginForm)">
+    <div class="form-group">
+      <label for="EmailId">Email address:</label>
+      <input type="email" class="form-control" name="emailId" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="Password">Password:</label>
+      <input type="password" class="form-control" name="password"  ngModel required>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" [disabled]="!adminLoginForm.valid" class="btn btn-info">Login</button>
+
+  </form>
+</div>

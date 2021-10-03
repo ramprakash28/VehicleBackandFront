@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 >User Login</h2>
+    <form #userLoginForm="ngForm" (ngSubmit)="loginuser(userLoginForm)">
+      
+        <div class="form-group">
+          <label for="userEmailId">Email address:</label>
+          <input type="email" class="form-control" name="userEmailId" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="userPassword">Password:</label>
+          <input type="password" class="form-control" name="userPassword"  ngModel required>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" [disabled]="!userLoginForm.valid" class="btn btn-info">Login</button>
+        
+      </form>
+
+      <br><br> New User?     <br>       <button (click)="gotoRegisterUser()" class="btn btn-info">Register</button>
+    </div>
